@@ -1,11 +1,18 @@
 # Tik-Tak-Toe
 Simple TIK TAK TOE game in terminal
 
-# How to run the game
+# How to run the game (In linux)
 ```sh
-make
+make linux
 cd build
 ./Tik-Tak-toe
+```
+
+# How to run the game (In windows)
+First you have to run "Run-This-If-You-Use-Windows-Run-in-admin.bat" 
+
+```sh
+make windows
 ```
 
 # How to get help
@@ -22,4 +29,5 @@ make
 ```sh
 make clean
 ```
+
 

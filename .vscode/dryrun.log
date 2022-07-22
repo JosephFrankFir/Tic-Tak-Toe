@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/joseph/Tik-Tak-Toe'
+mkdir build
+gcc ./src/lib/CheckTie.c ./src/lib/CheckWinner.c ./src/lib/DrawBoard.c ./src/lib/Game.c ./src/lib/GetHelp.c ./src/lib/MarkBoard.c ./src/lib/UserInput.c ./src/tik-tak-toe.c -o ./build/Tik-Tak-Toe
+make: Leaving directory '/home/joseph/Tik-Tak-Toe'
+ 
