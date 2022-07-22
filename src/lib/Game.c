@@ -26,7 +26,7 @@ void Game(void)
         {
             MarkBoard("player1", pos);
         }
-        #ifdef _WIN32
+        #if _WIN32
             system("cls")
         #elif __LINUX__
             system("clear");
@@ -63,7 +63,7 @@ void Game(void)
         {
             MarkBoard("player2", pos);
         }
-        #ifdef _WIN32
+        #if _WIN32
             system("cls")
         #elif __LINUX__
             system("clear");
