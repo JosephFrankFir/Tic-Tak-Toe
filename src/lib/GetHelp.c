@@ -2,7 +2,13 @@
 
 int GetHelp(int argc, char *argv[])
 {
-    system("clear");
+        #ifdef _WIN32
+            system("cls")
+        #elif __LINUX__
+            system("clear");
+        #endif
+
+
     if (argc == 2 && strcmp("--help", argv[1]) == 0)
     {
         board[0][0] = '1';

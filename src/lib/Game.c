@@ -26,7 +26,13 @@ void Game(void)
         {
             MarkBoard("player1", pos);
         }
-        system("clear");
+        #ifdef _WIN32
+            system("cls")
+        #elif __LINUX__
+            system("clear");
+        #endif
+
+        
         printf("\n     Tik Tak Toe\t\t\n");
         printf("Player1 (X) - Player2 (O)\n");
         DrawBoard();
@@ -57,7 +63,12 @@ void Game(void)
         {
             MarkBoard("player2", pos);
         }
-        system("clear");
+        #ifdef _WIN32
+            system("cls")
+        #elif __LINUX__
+            system("clear");
+        #endif
+
         printf("\n     Tik Tak Toe\t\t\n");
         printf("Player1 (X) - Player2 (O)\n");
         DrawBoard();
