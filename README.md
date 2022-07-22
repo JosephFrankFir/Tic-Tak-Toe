@@ -9,8 +9,8 @@ cd build
 ```
 
 # How to run the game (In windows)
-First you have to run "Run-This-If-You-Use-Windows-Run-in-admin.bat" 
-
+First you have to run "Run-This-If-You-Use-Windows-Run-in-admin.bat"(Installing Chocolatey) 
+Disable Anti virus if it blocks the program
 ```sh
 make windows
 ```
