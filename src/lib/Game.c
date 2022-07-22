@@ -27,7 +27,7 @@ void Game(void)
             MarkBoard("player1", pos);
         }
         #if _WIN32
-            system("cls")
+            system("cls");
         #elif __LINUX__
             system("clear");
         #endif
@@ -64,7 +64,7 @@ void Game(void)
             MarkBoard("player2", pos);
         }
         #if _WIN32
-            system("cls")
+            system("cls");
         #elif __LINUX__
             system("clear");
         #endif

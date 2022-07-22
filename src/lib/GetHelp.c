@@ -3,7 +3,7 @@
 int GetHelp(int argc, char *argv[])
 {
         #if _WIN32
-            system("cls")
+            system("cls");
         #elif __LINUX__
             system("clear");
         #endif
