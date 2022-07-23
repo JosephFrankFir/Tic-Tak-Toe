@@ -16,16 +16,6 @@ Disable Anti virus if it blocks the bat file
 make windows
 ```
 
-# How to get help
-```sh
-./Tik-Tak-toe --help
-```
-
-# How to build
-```sh
-make
-```
-
 # How to clean build folder (in linux)
 ```sh
 make clean-linux
@@ -33,5 +23,11 @@ make clean-linux
 # How to clean build folder (in windows)
 ```sh
 make clean-windows
+
+# How to get help
+```sh
+./Tik-Tak-toe --help
+```
+
 ```
 
