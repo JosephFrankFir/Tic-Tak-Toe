@@ -26,9 +26,12 @@ make windows
 make
 ```
 
-# How to clean build folder
+# How to clean build folder (in linux)
 ```sh
-make clean
+make clean-linux
 ```
-
+# How to clean build folder (in windows)
+```sh
+make clean-windows
+```
 
