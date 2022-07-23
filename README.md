@@ -9,6 +9,13 @@ cd build
 ```
 
 # How to run the game (In windows)
+run "Run-This-If-You-Use-Windows-Run-as-admin.bat"
+```sh
+cd build
+Tik-Tak-toe.exe
+```
+
+# How to run the game (In windows)
 You have to install GCC https://www.scaler.com/topics/c/c-compiler-for-windows/. Then,
 you have to run "Run-This-If-You-Use-Windows-Run-as-admin.bat"(Installing Chocolatey) 
 Disable Anti virus if it blocks the bat file
@@ -25,8 +32,13 @@ make clean-linux
 make clean-windows
 ```
 
-# How to get help
+# How to get help (in linux)
 ```sh
 ./Tik-Tak-toe --help
+```
+
+# How to get help (in windows)
+```sh
+Tik-Tak-toe.exe --help
 ```
 
