@@ -11,7 +11,7 @@ extern char board[][5];
 extern bool IsMarkAble[];
 
 // Define fucntions
-int GetHelp(int argc, char *argv[]);
+void GetHelp(int argc, char *argv[]);
 void Game(void);
 void DrawBoard(void);
 void MarkBoard(char *user, int pos);

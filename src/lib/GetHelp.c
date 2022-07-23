@@ -1,6 +1,6 @@
 #include "../include/game.h"
 
-int GetHelp(int argc, char *argv[])
+void GetHelp(int argc, char *argv[])
 {
         #if _WIN32
             system("cls");

@@ -1,7 +1,5 @@
 #include "../include/game.h"
 
-
-
 void UserInput(int ply_num, int pos, char symbol)
 {
     printf("Player%d (%c): ", ply_num, symbol);
