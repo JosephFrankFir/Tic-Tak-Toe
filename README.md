@@ -5,14 +5,14 @@ Simple TIK TAK TOE game in terminal
 ```sh
 make linux
 cd build
-./Tik-Tak-toe
+./Tik-Tak-Toe
 ```
 
 # How to run the game (In windows)
 run "Run-This-If-You-Use-Windows-Run-as-admin.bat"
 ```sh
 cd build
-Tik-Tak-toe.exe
+Tik-Tak-Toe.exe
 ```
 
 # How to run the game (In windows)
@@ -34,11 +34,11 @@ make clean-windows
 
 # How to get help (in linux)
 ```sh
-./Tik-Tak-toe --help
+./Tik-Tak-Toe --help
 ```
 
 # How to get help (in windows)
 ```sh
-Tik-Tak-toe.exe --help
+Tik-Tak-Toe.exe --help
 ```
 
