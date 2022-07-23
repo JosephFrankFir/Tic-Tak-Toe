@@ -30,6 +30,11 @@ void Game(void)
             system("cls");
         #elif __linux__
             system("clear");
+        #elif __APPLE__
+            #include <TargetConditionals.h>
+            #if TARGET_OS_MAC
+                system("clear");
+            #endif
         #endif
 
         
@@ -67,6 +72,11 @@ void Game(void)
             system("cls");
         #elif __linux__
             system("clear");
+        #elif __APPLE__
+            #include <TargetConditionals.h>
+            #if TARGET_OS_MAC
+                system("clear");
+            #endif
         #endif
 
         printf("\n     Tik Tak Toe\t\t\n");

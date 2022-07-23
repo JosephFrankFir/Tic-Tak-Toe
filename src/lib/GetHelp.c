@@ -6,6 +6,11 @@ int GetHelp(int argc, char *argv[])
             system("cls");
         #elif __linux__
             system("clear");
+        #elif __APPLE__
+            #include <TargetConditionals.h>
+            #if TARGET_OS_MAC
+                system("clear");
+            #endif
         #endif
 
 
