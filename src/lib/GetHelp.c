@@ -4,7 +4,7 @@ int GetHelp(int argc, char *argv[])
 {
         #if _WIN32
             system("cls");
-        #elif __LINUX__
+        #elif __linux__
             system("clear");
         #endif
 

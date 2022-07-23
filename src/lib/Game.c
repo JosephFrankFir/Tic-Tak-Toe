@@ -28,7 +28,7 @@ void Game(void)
         }
         #if _WIN32
             system("cls");
-        #elif __LINUX__
+        #elif __linux__
             system("clear");
         #endif
 
@@ -65,7 +65,7 @@ void Game(void)
         }
         #if _WIN32
             system("cls");
-        #elif __LINUX__
+        #elif __linux__
             system("clear");
         #endif
 

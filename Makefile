@@ -6,5 +6,7 @@ linux:
 windows:
 	mkdir build 
 	gcc $(FILES) -o ./build/Tik-Tak-Toe.exe
-clean:
+clean-linux:
 	rm -rf ./build
+clean-windows:
+	rmdir /s build
