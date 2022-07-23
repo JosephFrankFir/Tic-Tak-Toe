@@ -23,11 +23,10 @@ make clean-linux
 # How to clean build folder (in windows)
 ```sh
 make clean-windows
+```
 
 # How to get help
 ```sh
 ./Tik-Tak-toe --help
-```
-
 ```
 
