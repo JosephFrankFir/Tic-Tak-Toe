@@ -1,7 +1,7 @@
 # Tik-Tak-Toe
 Simple TIK TAK TOE game in terminal
 
-# How to run the game (In linux)
+# How to run the game (In linux & MacOS)
 ```sh
 make linux
 cd build
@@ -23,7 +23,7 @@ Disable Anti virus if it blocks the bat file
 make windows
 ```
 
-# How to clean build folder (in linux)
+# How to clean build folder (in linux & MacOS)
 ```sh
 make clean-linux
 ```
@@ -32,7 +32,7 @@ make clean-linux
 make clean-windows
 ```
 
-# How to get help (in linux)
+# How to get help (in linux & MacOS)
 ```sh
 ./Tik-Tak-Toe --help
 ```
