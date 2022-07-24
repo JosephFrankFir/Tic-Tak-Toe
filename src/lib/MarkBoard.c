@@ -1,7 +1,5 @@
 #include "../include/game.h"
 
-
-
 void MarkBoard(char *user, int pos)
 {
     char symbol = ' ';

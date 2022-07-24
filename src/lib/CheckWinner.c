@@ -1,8 +1,5 @@
 #include "../include/game.h"
 
-
-
-
 bool CheckWin(char *player)
 {
     char symbol = ' ';

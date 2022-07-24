@@ -1,7 +1,5 @@
 #include "../include/game.h"
 
-
-
 void DrawBoard(void)
 {
     // Looping through board array

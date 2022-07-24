@@ -1,7 +1,5 @@
 #include "../include/game.h"
 
-
-
 bool CheckTie(void)
 {
 
