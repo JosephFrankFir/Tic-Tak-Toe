@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 {
     GetHelp(argc, argv);
     Game();
-    if (argc == 2 && strcmp("--save", argv[1]))
+    if (argc == 2 && strcmp("--save", argv[1]) == 0)
     {
         SaveBoard(true ,board);
     }
