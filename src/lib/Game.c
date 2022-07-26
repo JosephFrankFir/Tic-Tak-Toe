@@ -4,7 +4,7 @@ void Game(void)
 {
     int pos;
     char term;
-    printf("\n     Tik Tak Toe\t\t\n");
+    printf("\n     Tic Tak Toe\t\t\n");
     printf("Player1 (X) - Player2 (O)\n");
     DrawBoard();
 
@@ -36,14 +36,13 @@ void Game(void)
             system("cls");
         #elif __linux__
             system("clear");
-        #elif __APPLE__
-            #include <TargetConditionals.h>
+        #elif __APPLE__            #include <TargetConditionals.h>
             #if TARGET_OS_MAC
                 system("clear");
             #endif
         #endif
 
-        printf("\n     Tik Tak Toe\t\t\n");
+        printf("\n     Tic Tak Toe\t\t\n");
         printf("Player1 (X) - Player2 (O)\n");
         DrawBoard();
         if (CheckWin("player1") == true)
@@ -88,7 +87,7 @@ void Game(void)
             #endif
         #endif
 
-        printf("\n     Tik Tak Toe\t\t\n");
+        printf("\n     Tic Tak Toe\t\t\n");
         printf("Player1 (X) - Player2 (O)\n");
         DrawBoard();
         if (CheckWin("player2") == true)
