@@ -47,7 +47,7 @@ void Game(void)
         DrawBoard();
         if (CheckWin("player1") == true)
         {
-            printf("Player 1 won\n");
+            printf("Player 1 won the game\n");
             break;
         }
         if (CheckTie() == true)
@@ -92,7 +92,7 @@ void Game(void)
         DrawBoard();
         if (CheckWin("player2") == true)
         {
-            printf("Player 2 won\n");
+            printf("Player 2 won the won\n");
             break;
         }
         if (CheckTie() == true)
