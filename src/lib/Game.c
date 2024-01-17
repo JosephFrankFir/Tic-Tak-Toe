@@ -1,102 +1,85 @@
 #include "../include/game.h"
 
-void Game(void)
-{
+
+void Game() {
     int pos;
     char term;
-    printf("\n     Tic Tak Toe\t\t\n");
+    if(!IsPlayer){
+        SetDifficulty();
+    }
+    Clean();
+    printf("\n     Tic Tac Toe\t\t\n");
     printf("Player1 (X) - Player2 (O)\n");
     DrawBoard();
+    
 
-    while (true)
-    {
+    while (true) {
         printf("Player1 (X): ");
-        if (scanf("%d%c", &pos, &term) != 2 || term != '\n')
-        {
-            fprintf(stderr, "Only degits allowed\n");
+        if (scanf("%d%c", &pos, &term) != 2 || term != '\n') {
+            fprintf(stderr, "Only digits allowed\n");
             exit(EXIT_FAILURE);
-        }
-        else if((pos > 9) || (pos <= 0))
-        {
+        } else if ((pos > 9) || (pos <= 0) || !IsMarkAble[pos - 1]) {
             fprintf(stderr, "Invalid move\n\n");
             UserInput(1, pos, 'X');
-        }
-
-        if ( (IsMarkAble[0] == false && pos == 1) || (IsMarkAble[1] == false && pos == 2) || (IsMarkAble[2] == false && pos == 3) || (IsMarkAble[3] == false && pos == 4) || (IsMarkAble[4] == false && pos == 5) || (IsMarkAble[5] == false && pos == 6) || (IsMarkAble[6] == false && pos == 7) || (IsMarkAble[7] == false && pos == 8) || (IsMarkAble[8] == false && pos == 9) )
-        {
-            fprintf(stderr, "Invalid move\n\n");
-            UserInput(1, pos, 'X');
-         
-        }
-        else
-        {
+        } else {
             MarkBoard("player1", pos);
         }
-        #if _WIN32
-            system("cls");
-        #elif __linux__
-            system("clear");
-        #elif __APPLE__            #include <TargetConditionals.h>
-            #if TARGET_OS_MAC
-                system("clear");
-            #endif
-        #endif
 
-        printf("\n     Tic Tak Toe\t\t\n");
+        Clean();
+
+        printf("\n     Tic Tac Toe\t\t\n");
         printf("Player1 (X) - Player2 (O)\n");
         DrawBoard();
-        if (CheckWin("player1") == true)
-        {
+
+        if (CheckWin("player1") == true) {
             printf("Player 1 won the game\n");
             break;
         }
-        if (CheckTie() == true)
-        {
+        if (CheckTie() == true) {
             printf("Tie.\n");
             break;
         }
 
-        printf("Player2 (O): ");
-        if (scanf("%d%c", &pos, &term) != 2 || term != '\n')
-        {
-            fprintf(stderr, "Only degits allowed\n");
-            exit(EXIT_FAILURE);
-        }
-        else if((pos > 9) || (pos <= 0))
-        {
-            fprintf(stderr, "Invalid move\n\n");
-            UserInput(1, pos, 'X');
-        }
-        if ( (IsMarkAble[0] == false && pos == 1) || (IsMarkAble[1] == false && pos == 2) || (IsMarkAble[2] == false && pos == 3) || (IsMarkAble[3] == false && pos == 4) || (IsMarkAble[4] == false && pos == 5) || (IsMarkAble[5] == false && pos == 6) || (IsMarkAble[6] == false && pos == 7) || (IsMarkAble[7] == false && pos == 8) || (IsMarkAble[8] == false && pos == 9) )
-        {
-            printf("Invalid move\n\n");
-            UserInput(2, pos, 'O');
-        }
-        else
-        {
+        // Player 2's turn
+        if (IsPlayer) {
+            printf("Player2 (O): ");
+            if (scanf("%d%c", &pos, &term) != 2 || term != '\n') {
+                fprintf(stderr, "Only digits allowed\n");
+                exit(EXIT_FAILURE);
+            } else if ((pos > 9) || (pos <= 0) || !IsMarkAble[pos - 1]) {
+                fprintf(stderr, "Invalid move\n\n");
+                UserInput(1, pos, 'O');
+            } else {
+                MarkBoard("player2", pos);
+            }
+        } else {
+            // AI's turn using Minimax with the chosen difficulty level
+            MoveScore aiMove;
+            if (DifficultyLevel == 1) {
+                aiMove = Minimax("player2", 'O', 3);  // Easy
+            } else if (DifficultyLevel == 2) {
+                aiMove = Minimax("player2", 'O', 6);  // Medium
+            } else if (DifficultyLevel == 3){
+                aiMove = Minimax("player2", 'O', 10); // Hard
+            }
+            else if (DifficultyLevel == 4){
+                aiMove = Minimax("player2", 'O', 13); // Very hard
+            }
+            pos = aiMove.move;
             MarkBoard("player2", pos);
         }
-        #if _WIN32
-            system("cls");
-        #elif __linux__
-            system("clear");
-        #elif __APPLE__
-            #include <TargetConditionals.h>
-            #if TARGET_OS_MAC
-                system("clear");
-            #endif
-        #endif
 
-        printf("\n     Tic Tak Toe\t\t\n");
+        Clean();
+
+        printf("\n     Tic Tac Toe\t\t\n");
         printf("Player1 (X) - Player2 (O)\n");
         DrawBoard();
-        if (CheckWin("player2") == true)
-        {
-            printf("Player 2 won the won\n");
+
+        if (CheckWin("player2") == true) {
+            printf("Player 2 won the game\n");
             break;
         }
-        if (CheckTie() == true)
-        {
+        if (CheckTie() == true) {
             printf("Tie.\n");
             break;
         }
